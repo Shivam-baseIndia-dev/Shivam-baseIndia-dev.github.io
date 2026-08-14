@@ -1,5 +1,32 @@
-
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// theme toggle
+const root = document.documentElement;
+const themeToggle = document.getElementById('themeToggle');
+const ttLabel = themeToggle.querySelector('.tt-label');
+
+function applyTheme(theme){
+if(theme === 'dark'){
+    root.setAttribute('data-theme', 'dark');
+    ttLabel.textContent = 'Light';
+    themeToggle.setAttribute('aria-label', 'Switch to light theme');
+} else {
+    root.removeAttribute('data-theme');
+    ttLabel.textContent = 'Dark';
+    themeToggle.setAttribute('aria-label', 'Switch to dark theme');
+}
+}
+
+let savedTheme = null;
+try { savedTheme = localStorage.getItem('gdc-theme'); } catch(e) {}
+applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+
+themeToggle.addEventListener('click', () => {
+const isDark = root.getAttribute('data-theme') === 'dark';
+const next = isDark ? 'light' : 'dark';
+applyTheme(next);
+try { localStorage.setItem('gdc-theme', next); } catch(e) {}
+});
 
 // mobile nav toggle
 const navToggle = document.getElementById('navToggle');

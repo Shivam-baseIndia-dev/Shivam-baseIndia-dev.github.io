@@ -18,14 +18,21 @@
       <span class="mark"><span>GDC</span></span>
       Base India
     </a>
-    <button class="navToggle" id="navToggle" aria-label="Toggle menu">≡</button>
-    <ul class="navlinks" id="navlinks">
-      <li><a href="#journey"><span class="num">01</span>Journey</a></li>
-      <li><a href="#services"><span class="num">02</span>Services</a></li>
-      <li><a href="#projects"><span class="num">03</span>Projects</a></li>
-      <li><a href="#clients"><span class="num">04</span>Clients</a></li>
-      <li><a href="#contact"><span class="num">05</span>Contact</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="navlinks" id="navlinks">
+        <li><a href="#journey"><span class="num">01</span>Journey</a></li>
+        <li><a href="#services"><span class="num">02</span>Services</a></li>
+        <li><a href="#projects"><span class="num">03</span>Projects</a></li>
+        <li><a href="#clients"><span class="num">04</span>Clients</a></li>
+        <li><a href="#contact"><span class="num">05</span>Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark theme">
+        <svg class="tt-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+        <svg class="tt-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <span class="tt-label">Dark</span>
+      </button>
+      <button class="navToggle" id="navToggle" aria-label="Toggle menu">≡</button>
+    </div>
   </div>
 </header>
 
@@ -33,6 +40,7 @@
 
   <!-- HERO -->
   <section class="hero" style="border-top:none; padding-top:168px;">
+    <div class="photo hero-photo" style="background-image:url('https://images.unsplash.com/photo-1493476523860-a6de6ce1b0c3?w=1800&q=80&auto=format&fit=crop');"></div>
     <div class="container">
       <div class="eyebrow">Base India — EST. 2004</div>
       <div class="hero-grid">
@@ -98,6 +106,14 @@
         <div class="stat"><div class="num">20+</div><div class="lbl">Years in structural steel</div></div>
       </div>
 
+      <div class="plate crosshairs" style="margin-top:52px;">
+        <div class="plate-img" style="background-image:url('https://images.unsplash.com/photo-1600965581129-eef8a214ec9d?w=1600&q=80&auto=format&fit=crop');"></div>
+        <div class="plate-cap">
+          <span>FIG. 01 — ON SITE</span>
+          <span>GDC / FIELD REVIEW</span>
+        </div>
+      </div>
+
       <div class="two-col">
         <div>
           <span class="col-label">About us</span>
@@ -123,6 +139,8 @@
         </div>
         <p class="sec-desc">From anchor bolts to advance bills of material — the full detailing scope.</p>
       </div>
+
+      <div class="photo banner-photo crosshairs" style="background-image:url('https://images.unsplash.com/photo-1609627016501-b862497c7294?w=1800&q=80&auto=format&fit=crop');"></div>
 
       <div class="service-grid">
         <div class="service-card crosshairs">
@@ -185,6 +203,8 @@
         <p class="sec-desc">A selection from 500+ delivered projects, filed by sector. Filter the register below.</p>
       </div>
 
+      <div class="photo banner-photo crosshairs" style="background-image:url('https://images.unsplash.com/photo-1668886580919-ce45651f3ccf?w=1800&q=80&auto=format&fit=crop');"></div>
+
       <div class="filters" id="filters">
         <button class="filter-btn active" data-filter="all">All Sectors</button>
         <button class="filter-btn" data-filter="Defense">Defense &amp; Hangars</button>
@@ -231,8 +251,9 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
+  <section id="contact" style="position:relative; overflow:hidden;">
+    <div class="photo" style="position:absolute; inset:0; opacity:0.16; background-image:url('https://images.unsplash.com/photo-1531435338678-4ef2b632e95d?w=1800&q=80&auto=format&fit=crop');"></div>
+    <div class="container" style="position:relative;">
       <div class="sec-head">
         <div>
           <div class="eyebrow">Sheet 05</div>
